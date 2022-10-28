@@ -1,0 +1,213 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #eee;
+    height: auto;
+}
+.landing-text{
+    position: relative;
+}
+
+.book-btn{
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+
+}
+#book{
+    padding: 0.2rem 1rem;
+    border: 1px gray solid;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    transition: background 2s ease-in-out;
+}
+#book:hover{
+    background: white;
+}
+#social{
+    padding: 0.2rem 1rem;
+    border: 1px gray solid;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    transition: background 2s ease-in-out;
+}
+#social:hover{
+    background: white;
+}
+#logo{
+    position: relative;
+    width: 100px;
+    height: 70px;
+    animation-name: log;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+h1{
+    position: relative;
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    animation-name: mybeta;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0;
+}
+.img{
+    display: block;
+    width: 100%;
+    
+}
+.image{
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.199), -30px 0px 40px rgba(0, 0, 0, 0.103);
+}
+.landing-page{
+    background: white;
+}
+.landing-text{
+    display: flex;
+    flex: 0 1 50vw;
+    height: 50vh;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;   
+}
+.landing-text h2{
+    position: relative;
+    color: gray;
+    animation-name: create;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    
+}
+.landing-image{
+    background: url(/beta4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 50vw;
+    margin: 0;
+}
+.btn{
+    padding: 0.5rem 2rem;
+    border: 1px gray solid;
+    display: inline-block;
+    margin:2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    opacity: 0;
+    animation-name: button;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+.btn:hover{
+    background: orange;
+    transform: rotateY(180deg);
+    
+}
+.header{
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+#work{
+    border-left: dotted 1px white;
+    border-right:dotted 1px white;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+.caption{
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333;
+}
+footer h3{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+
+@keyframes mybeta{
+     0%{left: -1000px;}
+     100%{left: 0px;}
+}
+
+@keyframes create{
+    0%{right: -1000px;}
+    100%{right: 0px;}
+}
+
+@keyframes log{
+    0%{top: -1000px;}
+    100%{top: 0px;}
+}
+@keyframes button{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+/*screen sizes 500px and up*/
+@media(min-width: 500px){
+   .landing-page{
+    display: flex;
+    height: 100%;
+   }
+   .landing-text{
+    height: 100vh;
+   }
+   .landing-image{
+    height: 100vh;
+   }
+}
+
+/*screen sizes 700px and up*/
+@media(min-width: 700px){
+      .btn{
+        padding: 1rem 3rem;
+      }
+}
+
+/*screen sizes 500px and down*/
+@media(max-width: 499px){
+    .book-btn{
+        display: none;
+    }
+
+}
